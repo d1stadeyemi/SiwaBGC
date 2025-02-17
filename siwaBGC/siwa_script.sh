@@ -16,6 +16,9 @@ fi
 # Create output directories if not created
 mkdir -p logs fastp_output nonpareil_output
 
+# Initialize samples array
+SAMPLES=()
+
 while [[ $# -gt 0 ]]; do # While their still reads to run
     # Define input files
     RAW_READS_R1=$1

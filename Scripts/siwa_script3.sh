@@ -7,5 +7,5 @@ source ~/miniconda3/etc/profile.d/conda.sh
 set -u 
 
 # This script detects BGCs from MAGs and unbinned contigs Fasta files.
-# Calculates the abundance of BGCs.
+# Calculates the abundance of BGCs in each sample.
 # Compares the putative BGCs with MiBIG and BGC atlas databases for novelty check.

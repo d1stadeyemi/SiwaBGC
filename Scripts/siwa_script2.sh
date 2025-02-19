@@ -9,4 +9,4 @@ set -u
 # This script assembles metagenomic reads into contigs.
 # Bins the contigs and select MAGs.
 # Classifies the MAGs into taxa.
-# Place MAGs into the GTDB reference genomes for phylogenomy.
+# Place MAGs within the GTDB reference genomes for phylogenomy.

@@ -53,4 +53,15 @@ while [[ $# -gt 0 ]]; then
         --genefinding-tool prodigal-m "$fasta_file" \
         > logs/${SAMPLE_NAME}_$(basename "$fasta_file" .fa).log 2>&1
 
+        if [[ $? -ne 0 ]]
+        then
+            echo "Error: Antismash failed for $(basename "$fasta_file")"
+            echo "Check logs/${SAMPLE_NAME}_$(basename "$fasta_file" .fa).log for for details"
+            exit 1
+        fi
+
+        echo "Antismash completed for $(basename "$fasta_file"). Output saved to ${OUTPUT_DIR}"
+
+    done
+
 done

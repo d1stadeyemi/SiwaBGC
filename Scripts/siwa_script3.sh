@@ -41,5 +41,7 @@ while [[ $# -gt 0 ]]; then
     # 1. Detect BGCs in samples
     conda activate antismash
     echo "Running Antismash on ${SAMPLE_NAME}_MAGs..."
+    for fasta_file in "$INPUT_DIR"/*.fa; do
+        OUTPUT_DIR=antismash_output/${SAMPLE_NAME}_$(basename "$fasta_file" .fa) 
 
 done

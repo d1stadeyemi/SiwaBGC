@@ -50,6 +50,7 @@ while [[ $# -gt 0 ]]; then
 
         antismash --output-dir "$OUTPUT_DIR" --tigrfam --asf --cc-mibig --cb-general \
         --cb-subclusters --cb-knownclusters --pfam2go --rre --smcog-trees --tfbs \
-        --genefinding-tool prodigal-m "$fasta_file" > logs/
+        --genefinding-tool prodigal-m "$fasta_file" \
+        > logs/${SAMPLE_NAME}_$(basename "$fasta_file" .fa).log 2>&1
 
 done

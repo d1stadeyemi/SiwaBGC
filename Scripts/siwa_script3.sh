@@ -10,7 +10,7 @@ set -u
 # Calculates the abundance of BGCs in each sample.
 # Compares the putative BGCs with MiBIG and BGC atlas databases for novelty check.
 
-mkdir -p antismash_output
+mkdir -p logs antismash_output
 
 # Ensure at least one directory is provided
 if [[ $# -lt 1 ]]; then
@@ -56,12 +56,15 @@ while [[ $# -gt 0 ]]; then
         if [[ $? -ne 0 ]]
         then
             echo "Error: Antismash failed for $(basename "$fasta_file")"
-            echo "Check logs/${SAMPLE_NAME}_$(basename "$fasta_file" .fa).log for for details"
+            echo "Check logs/${SAMPLE_NAME}_$(basename "$fasta_file" .fa).log for details"
             exit 1
         fi
 
         echo "Antismash completed for $(basename "$fasta_file"). Output saved to ${OUTPUT_DIR}"
 
     done
+    
+    conda deativate
+    echo "Antismash complete for ${SAMPLE_NAME}_MAGs..."
 
 done

@@ -48,6 +48,8 @@ while [[ $# -gt 0 ]]; then
         
         echo "Running Antismash on $(basename "$fasta_file")..." 
 
-        antismash --output-dir "$OUTPUT_DIR"  "$fasta_file"
+        antismash --output-dir "$OUTPUT_DIR" --tigrfam --asf --cc-mibig --cb-general \
+        --cb-subclusters --cb-knownclusters --pfam2go --rre --smcog-trees --tfbs \
+        --genefinding-tool prodigal-m "$fasta_file" > logs/
 
 done

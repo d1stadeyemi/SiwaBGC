@@ -10,7 +10,7 @@ set -u
 # Calculates the abundance of BGCs in each sample.
 # Compares the putative BGCs with MiBIG and BGC atlas databases for novelty check.
 
-mkdir -p logs antismash_output
+mkdir -p logs antismash_output BGCs bigmap_output
 
 # Ensure at least one directory is provided
 if [[ $# -lt 1 ]]; then
@@ -67,4 +67,13 @@ while [[ $# -gt 0 ]]; then
     conda deativate
     echo "Antismash complete for ${SAMPLE_NAME}_MAGs..."
 
+    # 2. Collect all BGCs into a directory
+    find antismash_output -f "*region001.gbk" -exec mv {} BGC
+
+    # 3. Determine the abundance of BGCs with BIG-MAP
+    conda activate BiG-MAP_process
+
+    # Group BGCs into GCF
+    python3 BiG-MAP/src/BiG-MAP.family.py -D ~/BGCs/ -b ~/BiG-SCAPE-1.1.9/ \
+    -pf ~/BiG-SCAPE-1.1.9/ -O bigmap_output/BiG-MAP.family_output
 done

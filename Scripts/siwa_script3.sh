@@ -69,7 +69,12 @@ while [[ $# -gt 0 ]]; then
 
             ### Come back here
     # Rename BGC files
-    find antismash_output -name "*.region001.gbk" -exec mv {} "$SAMPLE_NAME"_{}
+    find antismash_output -name "*.region001.gbk" -exec sh -c '
+        for file; do
+            mv "$file" "$(dirname "$file")/${SAMPLE_NAME}_$(basename "$file")"
+    ' _ {} +
+        
+        mv {} "$SAMPLE_NAME"_{} \;
     # 2. Collect all BGCs into a directory
     find antismash_output -name "*.region001.gbk" -exec mv -t BGC {} +
 

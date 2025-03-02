@@ -67,21 +67,20 @@ while [[ $# -gt 0 ]]; then
     conda deativate
     echo "Antismash complete for ${SAMPLE_NAME}_MAGs..."
 
-            ### Come back here
-    # Rename BGC files
+    # 2. Rename BGC files
     find antismash_output -name "*.region001.gbk" -exec sh -c '
         for file; do
             mv "$file" "$(dirname "$file")/${SAMPLE_NAME}_$(basename "$file")"
     ' _ {} +
-        
-        mv {} "$SAMPLE_NAME"_{} \;
-    # 2. Collect all BGCs into a directory
+
+    # Collect all BGCs into a directory
     find antismash_output -name "*.region001.gbk" -exec mv -t BGC {} +
 
     # 3. Determine the abundance of BGCs with BIG-MAP
     conda activate BiG-MAP_process
 
     # Group BGCs into GCF
-    python3 BiG-MAP/src/BiG-MAP.family.py -D ~/BGCs/ -b ~/BiG-SCAPE-1.1.9/ \
-    -pf ~/BiG-SCAPE-1.1.9/ -O bigmap_output/BiG-MAP.family_output
+    python3 BiG-MAP/src/BiG-MAP.family.py -D BGCs -b BiG-SCAPE-1.1.9 \
+    -pf BiG-SCAPE-1.1.9 -O bigmap_output/BiG-MAP.family_output
+    
 done

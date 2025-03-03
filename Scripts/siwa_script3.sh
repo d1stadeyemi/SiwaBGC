@@ -51,12 +51,12 @@ while [[ $# -gt 0 ]]; then
         antismash --output-dir "$OUTPUT_DIR" --tigrfam --asf --cc-mibig --cb-general \
         --cb-subclusters --cb-knownclusters --pfam2go --rre --smcog-trees --tfbs \
         --genefinding-tool prodigal-m "$fasta_file" \
-        > logs/${SAMPLE_NAME}_$(basename "$fasta_file" .fa).log 2>&1
+        > logs/"$OUTPUT_DIR".log 2>&1
 
         if [[ $? -ne 0 ]]
         then
             echo "Error: Antismash failed for $(basename "$fasta_file")"
-            echo "Check logs/${SAMPLE_NAME}_$(basename "$fasta_file" .fa).log for details"
+            echo "Check logs/"$OUTPUT_DIR".log for details"
             exit 1
         fi
 
@@ -81,6 +81,15 @@ while [[ $# -gt 0 ]]; then
 
     # Group BGCs into GCF
     python3 ~/BiG-MAP/src/BiG-MAP.family.py -D BGCs -b ~/BiG-SCAPE-1.1.9 \
-    -pf ~/BiG-SCAPE-1.1.9 -O bigmap_output/BiG-MAP.family_output
+    -pf ~/BiG-SCAPE-1.1.9 -O bigmap_output/BiG-MAP.family_output \
+    > logs/bigmap_output/BiG-MAP.family_output.log 2>&1 
     
+    if [[ $? -ne 0 ]]
+        then
+            echo "Error: BiG-MAP_process failed."
+            echo "Check logs/bigmap_output/BiG-MAP.family_output.log for details"
+            exit 1
+        fi
 done
+
+# Pipeline successfully completed.

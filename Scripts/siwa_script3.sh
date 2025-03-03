@@ -79,17 +79,19 @@ while [[ $# -gt 0 ]]; then
     # 3. Determine the abundance of BGCs with BIG-MAP
     conda activate BiG-MAP_process
 
-    # Group BGCs into GCF
+    # Group BGCs into GCF with BiG-MAP.family.py
     python3 ~/BiG-MAP/src/BiG-MAP.family.py -D BGCs -b ~/BiG-SCAPE-1.1.9 \
     -pf ~/BiG-SCAPE-1.1.9 -O bigmap_output/BiG-MAP.family_output \
     > logs/bigmap_output/BiG-MAP.family_output.log 2>&1 
     
     if [[ $? -ne 0 ]]
-        then
-            echo "Error: BiG-MAP_process failed."
-            echo "Check logs/bigmap_output/BiG-MAP.family_output.log for details"
-            exit 1
-        fi
+    then
+        echo "Error: BiG-MAP_process failed."
+        echo "Check logs/bigmap_output/BiG-MAP.family_output.log for details"
+        exit 1
+    fi
+
+    # Calculate BGC abundance with BiG-MAP.map.py
 done
 
 # Pipeline successfully completed.

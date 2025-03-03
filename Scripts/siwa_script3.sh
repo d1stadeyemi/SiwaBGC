@@ -80,7 +80,7 @@ while [[ $# -gt 0 ]]; then
     conda activate BiG-MAP_process
 
     # Group BGCs into GCF
-    python3 BiG-MAP/src/BiG-MAP.family.py -D BGCs -b BiG-SCAPE-1.1.9 \
-    -pf BiG-SCAPE-1.1.9 -O bigmap_output/BiG-MAP.family_output
+    python3 ~/BiG-MAP/src/BiG-MAP.family.py -D BGCs -b ~/BiG-SCAPE-1.1.9 \
+    -pf ~/BiG-SCAPE-1.1.9 -O bigmap_output/BiG-MAP.family_output
     
 done

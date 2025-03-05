@@ -68,6 +68,8 @@ while [[ $# -gt 0 ]]; then
     echo "Antismash complete for ${SAMPLE_NAME}_MAGs..."
 
     # 2. Rename BGC files
+    echo "Renaming BGCs by adding prefixes with sample names..."
+
     find antismash_output -name "*.region001.gbk" -exec sh -c '
         for file; do
             mv "$file" "$(dirname "$file")/${SAMPLE_NAME}_$(basename "$file")"
@@ -102,6 +104,20 @@ while [[ $# -gt 0 ]]; then
         echo "Check logs/bigmap_output/BiG-MAP.map_output.log for details"
         exit 1
     fi
+
+    conda deactivate
+    echo "BiG-MAP completed successfully."
+
+    # 4. Compare BGCs with MiBIG BGCs using BiG-SLICE v2
+    conda activate bigslice
+
+    # Extract pfam domains in MiBiG BGCs and calculate cosine distance (default threshold=0.4)
+    # to form GCFs
+    bigslice -i bigslice_mibig_input bigslice_mibig_output
+
+    # Compare BGCs to MibiG GCFs
+    bigslice --query BGCs --n_ranks 3 bigslice_mibig_output
+
 done
 
 # Pipeline successfully completed.

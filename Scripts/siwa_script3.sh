@@ -92,7 +92,16 @@ while [[ $# -gt 0 ]]; then
     fi
 
     # Calculate BGC abundance with BiG-MAP.map.py
-    
+    python3 ~/BiG-MAP/src/BiG-MAP.map.py -I1 clean_reads/*qc_1* -I2 clean_reads/*qc_2* \
+    -O bigmap_output/BiG-MAP.map_output -F bigmap_output/BiG-MAP.family_output \
+    > logs/bigmap_output/BiG-MAP.map_output.log 2>&1
+
+    if [[ $? -ne 0 ]]
+    then
+        echo "Error: BiG-MAP_process failed."
+        echo "Check logs/bigmap_output/BiG-MAP.map_output.log for details"
+        exit 1
+    fi
 done
 
 # Pipeline successfully completed.

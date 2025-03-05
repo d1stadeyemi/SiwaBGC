@@ -92,6 +92,7 @@ while [[ $# -gt 0 ]]; then
     fi
 
     # Calculate BGC abundance with BiG-MAP.map.py
+    
 done
 
 # Pipeline successfully completed.

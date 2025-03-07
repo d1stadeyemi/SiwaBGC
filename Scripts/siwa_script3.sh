@@ -118,6 +118,9 @@ while [[ $# -gt 0 ]]; then
     # Compare BGCs to MibiG GCFs
     bigslice --query BGCs --n_ranks 3 bigslice_mibig_output
 
+    conda deactivate
+    echo "BiG-SLICE complete successfully."
+
 done
 
 # Pipeline successfully completed.

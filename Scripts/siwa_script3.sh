@@ -116,7 +116,7 @@ while [[ $# -gt 0 ]]; then
     bigslice -i bigslice_mibig_input bigslice_mibig_output
 
     # Compare BGCs to MibiG GCFs
-    bigslice --query BGCs --n_ranks 3 bigslice_mibig_output
+    bigslice --query BGCs --n_ranks 2 bigslice_mibig_output
 
     conda deactivate
     echo "BiG-SLICE complete successfully."

@@ -38,7 +38,7 @@ while [[ $# -gt 0 ]]; then
         exit 1
     fi
 
-    # 1. Detect BGCs in samples with Antismash
+    # 1. Detect BGCs in samples with Antismash 
     conda activate antismash
     echo "Running Antismash on ${SAMPLE_NAME}_MAGs..."
     

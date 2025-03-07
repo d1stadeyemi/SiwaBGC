@@ -32,7 +32,7 @@ while [[ $# -gt 0 ]]; then
         exit 1
     fi
 
-    # Check if input directory is empty
+    # Check if input directory is empty or not
     if ! find "$INPUT_DIR" -mindepth 1 | read -r _; then
         echo "Error: '$INPUT_DIR' is empty."
         exit 1

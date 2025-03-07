@@ -20,7 +20,7 @@ if [[ $# -lt 1 ]]; then
 fi
 
 while [[ $# -gt 0 ]]; then
-    # Define input directory
+    # Define input directory 
     INPUT_DIR=$1
     SAMPLE_NAME=$(basename "$INPUT_DIR" | cut -d"_" -f1) # Extract sample name
 

@@ -64,10 +64,10 @@ while [[ $# -gt 0 ]]; then
 
     done
     
-    conda deativate
+    conda deativate 
     echo "Antismash complete for ${SAMPLE_NAME}_MAGs..."
 
-    # 2. Rename BGC files
+    # 2. Rename BGC files 
     echo "Renaming BGCs by adding prefixes with sample names..."
 
     find antismash_output -name "*.region001.gbk" -exec sh -c '
@@ -75,7 +75,7 @@ while [[ $# -gt 0 ]]; then
             mv "$file" "$(dirname "$file")/${SAMPLE_NAME}_$(basename "$file")"
     ' _ {} +
 
-    # Collect all BGCs into a directory
+    # Collect all BGCs into a directory 
     find antismash_output -name "*.region001.gbk" -exec mv -t BGC {} +
 
     # 3. Determine the abundance of BGCs with BIG-MAP

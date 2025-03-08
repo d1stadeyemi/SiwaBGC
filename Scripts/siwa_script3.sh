@@ -24,7 +24,7 @@ while [[ $# -gt 0 ]]; then
     INPUT_DIR=$1
     SAMPLE_NAME=$(basename "$INPUT_DIR" | cut -d"_" -f1) # Extract sample name
 
-    # Check if input directory is not valid. 
+    # Check if input directory is not valid.
     if [[ ! -d "$INPUT_DIR" ]]
     then
         echo "Error: "$INPUT_DIR" is not a valid directory"
@@ -32,7 +32,7 @@ while [[ $# -gt 0 ]]; then
         exit 1
     fi
 
-    # Check if input directory is empty 
+    # Check if input directory is empty
     if ! find "$INPUT_DIR" -mindepth 1 | read -r _; then
         echo "Error: '$INPUT_DIR' is empty."
         exit 1

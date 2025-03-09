@@ -78,10 +78,10 @@ while [[ $# -gt 0 ]]; then
     # Collect all BGCs into a directory
     find antismash_output -name "*.region001.gbk" -exec mv -t BGC {} +
 
-    # 3. Determine the abundance of BGCs with BIG-MAP
+    # 3. Determine the abundance of BGCs with BIG-MAP 
     conda activate BiG-MAP_process
 
-    # Group BGCs into GCF with BiG-MAP.family.py
+    # Group BGCs into GCF with BiG-MAP.family.py 
     python3 ~/BiG-MAP/src/BiG-MAP.family.py -D BGCs -b ~/BiG-SCAPE-1.1.9 \
     -pf ~/BiG-SCAPE-1.1.9 -O bigmap_output/BiG-MAP.family_output \
     > logs/bigmap_output/BiG-MAP.family_output.log 2>&1 
@@ -93,7 +93,7 @@ while [[ $# -gt 0 ]]; then
         exit 1
     fi
 
-    # Calculate BGC abundance with BiG-MAP.map.py
+    # Calculate BGC abundance with BiG-MAP.map.py 
     python3 ~/BiG-MAP/src/BiG-MAP.map.py -I1 clean_reads/*qc_1* -I2 clean_reads/*qc_2* \
     -O bigmap_output/BiG-MAP.map_output -F bigmap_output/BiG-MAP.family_output \
     > logs/bigmap_output/BiG-MAP.map_output.log 2>&1

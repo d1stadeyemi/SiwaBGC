@@ -105,14 +105,14 @@ while [[ $# -gt 0 ]]; then
         exit 1
     fi
 
-    conda deactivate 
+    conda deactivate
     echo "BiG-MAP completed successfully."
 
-    # 4. Compare BGCs with MiBIG BGCs using BiG-SLICE v2 
+    # 4. Compare BGCs with MiBIG BGCs using BiG-SLICE v2
     conda activate bigslice
 
-    # Extract pfam domains in MiBiG BGCs and calculate cosine distance (default threshold=0.4) 
-    # to form GCFs
+    # Extract pfam domains in MiBiG BGCs and calculate cosine distance (default threshold=0.4)
+    # to form GCFs 
     bigslice -i bigslice_mibig_input bigslice_mibig_output
 
     # Compare BGCs to MibiG GCFs

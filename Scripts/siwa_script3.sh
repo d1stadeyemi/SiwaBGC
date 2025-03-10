@@ -6,9 +6,9 @@ source ~/miniconda3/etc/profile.d/conda.sh
 # Error on undefined variables
 set -u 
 
-# This script detects BGCs from MAGs and unbinned contigs Fasta files.
-# Calculates the abundance of BGCs in each sample.
-# Compares the putative BGCs with MiBIG and BGC atlas databases for novelty check.
+# This script detects BGCs from MAGs and unbinned contigs Fasta files. 
+# Calculates the abundance of BGCs in each sample. 
+# Compares the putative BGCs with MiBIG and BGC atlas databases for novelty check. 
 
 mkdir -p logs antismash_output BGCs bigmap_output
 
@@ -112,7 +112,7 @@ while [[ $# -gt 0 ]]; then
     conda activate bigslice
 
     # Extract pfam domains in MiBiG BGCs and calculate cosine distance (default threshold=0.4)
-    # to form GCFs 
+    # to form GCFs
     bigslice -i bigslice_mibig_input bigslice_mibig_output
 
     # Compare BGCs to MibiG GCFs

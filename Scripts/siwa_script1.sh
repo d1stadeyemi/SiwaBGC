@@ -84,13 +84,13 @@ done
 echo "Sequence quality successfully estimated for all samples with Nonpareil. Output saved to 'nonpareil_output'"
 conda deactivate
 
-# 3. Evaluate reads taxonomy with Kraken 2
+# 3. Evaluate reads taxonomy with Kraken 2 
 echo "Running Kraken 2 on all samples..."
 
 for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do
     SAMPLE_NAME=${SAMPLES[i]}
 
-    echo "Processing ${SAMPLE_NAME}_sample..."
+    echo "Processing ${SAMPLE_NAME}_sample..." 
 
 
-echo "Pipeline finished successfully"
+echo "Pipeline finished successfully" 

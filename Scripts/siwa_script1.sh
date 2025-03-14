@@ -11,7 +11,7 @@ set -o pipefail # Detect errors in pipeline
 # Conducts quality control on the reads.
 # Measures sequencing quality.
 # Taxonomic classification of reads.
-# Determines microbial diversity among samples.
+# Determines microbial diversity among samples. 
 
 # Check if at least one pair of reads is given 
 if [[ $# -lt 2 || $(($# % 2)) -ne 0 ]]; then
@@ -64,7 +64,7 @@ done
 
 echo "Fastp completed for all samples. Output saved to 'fastp_output'"
 
-# 2. Evaluate sequence quality with Nonpareil
+# 2. Evaluate sequence quality with Nonpareil 
 conda activate nonpareil
 echo "Running Nonpareil on all samples..."
 
@@ -84,7 +84,7 @@ done
 echo "Sequence quality successfully estimated for all samples with Nonpareil. Output saved to 'nonpareil_output'"
 conda deactivate
 
-# 3. Evaluate reads taxonomy with Kraken 2 
+# 3. Evaluate reads taxonomy with Kraken 2
 echo "Running Kraken 2 on all samples..."
 
 for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do
@@ -93,4 +93,4 @@ for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do
     echo "Processing ${SAMPLE_NAME}_sample..." 
 
 
-echo "Pipeline finished successfully" 
+echo "Pipeline finished successfully"

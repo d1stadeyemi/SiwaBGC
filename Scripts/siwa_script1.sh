@@ -7,11 +7,11 @@ source ~/miniconda3/etc/profile.d/conda.sh
 set -u # Error on undefined variables 
 set -o pipefail # Detect errors in pipeline 
 
-# This script receives merged paired-end reads.
-# Conducts quality control on the reads.
-# Measures sequencing quality.
-# Taxonomic classification of reads.
-# Determines microbial diversity among samples.
+# This script receives merged paired-end reads. 
+# Conducts quality control on the reads. 
+# Measures sequencing quality. 
+# Taxonomic classification of reads. 
+# Determines microbial diversity among samples. 
 
 # Check if at least one pair of reads is given
 if [[ $# -lt 2 || $(($# % 2)) -ne 0 ]]; then

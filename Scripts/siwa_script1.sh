@@ -3,8 +3,8 @@
 # Load Conda
 source ~/miniconda3/etc/profile.d/conda.sh
 
-# Handle different errors 
-set -u # Error on undefined variables 
+# Handle different errors
+set -u # Error on undefined variables
 set -o pipefail # Detect errors in pipeline 
 
 # This script receives merged paired-end reads.

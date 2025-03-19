@@ -74,7 +74,7 @@ for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do
     echo "Processing ${SAMPLE_NAME}_sample..."
     nonpareil -s fastp_output/"$SAMPLE_NAME"_cleaned_r1.fastq -T kmer -k 15 -f fastq -b nonpareil_output/"$SAMPLE_NAME"_output > logs/"$SAMPLE_NAME"_nonpareil.log 2>&1
 
-    # Check the exit status of the last command. If it failed (exit status !=0), print error message and exit
+    # Check the exit status of the last command. If it failed (exit status !=0), print error message and exit 
     if [[ $? -ne 0 ]]; then
         echo "Error! Nonpareil failed for ${SAMPLE_NAME}_sample. Check logs/"$SAMPLE_NAME"_nonpareil.log for details"
         exit 1
@@ -84,7 +84,7 @@ done
 echo "Sequence quality successfully estimated for all samples with Nonpareil. Output saved to 'nonpareil_output'"
 conda deactivate
 
-# 3. Evaluate reads taxonomy with Kraken 2
+# 3. Evaluate reads taxonomy with Kraken 2 
 echo "Running Kraken 2 on all samples..."
 
 for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do

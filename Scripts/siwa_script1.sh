@@ -25,7 +25,7 @@ mkdir -p logs fastp_output nonpareil_output
 # Initialize samples array
 SAMPLES=()
 
-while [[ $# -gt 0 ]]; do # While their still reads to run
+while [[ $# -gt 0 ]]; do # While their still reads to run 
     # Define input files
     RAW_READS_R1=$1
     RAW_READS_R2=$2
@@ -40,7 +40,7 @@ while [[ $# -gt 0 ]]; do # While their still reads to run
     # Save to array
     SAMPLES+=("$SAMPLE_NAME" "$RAW_READS_R1" "$RAW_READS_R2")
 
-    # Shift to next pair
+    # Shift to next pair 
     shift 2
 done
 

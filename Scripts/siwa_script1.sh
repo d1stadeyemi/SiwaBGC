@@ -37,14 +37,14 @@ while [[ $# -gt 0 ]]; do # While their still reads to run
         exit 1
     fi
 
-    # Save to array
+    # Save to array 
     SAMPLES+=("$SAMPLE_NAME" "$RAW_READS_R1" "$RAW_READS_R2")
 
-    # Shift to next pair 
+    # Shift to next pair
     shift 2
 done
 
-# 1. Quality control with Fastp 
+# 1. Quality control with Fastp
 echo "Running Fastp on all samples..."
 
 for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do

@@ -37,10 +37,10 @@ while [[ $# -gt 0 ]]; do # While their still reads to run
         exit 1
     fi
 
-    # Save to array 
+    # Save to array
     SAMPLES+=("$SAMPLE_NAME" "$RAW_READS_R1" "$RAW_READS_R2")
 
-    # Shift to next pair
+    # Shift to next pair 
     shift 2
 done
 

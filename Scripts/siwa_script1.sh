@@ -25,11 +25,11 @@ mkdir -p logs fastp_output nonpareil_output
 # Initialize samples array
 SAMPLES=()
 
-while [[ $# -gt 0 ]]; do # While their still reads to run 
+while [[ $# -gt 0 ]]; do # While their still reads to run
     # Define input files 
     RAW_READS_R1=$1
     RAW_READS_R2=$2
-    SAMPLE_NAME=$(basename "$RAW_READS_R1" | cut -d"_" -f1) # Extract sample name 
+    SAMPLE_NAME=$(basename "$RAW_READS_R1" | cut -d"_" -f1) # Extract sample name
 
     # Check input files exit 
     if [[ ! -f "$RAW_READS_R1" || ! -f "$RAW_READS_R2" ]]; then

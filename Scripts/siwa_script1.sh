@@ -7,9 +7,9 @@ source ~/miniconda3/etc/profile.d/conda.sh
 set -u # Error on undefined variables 
 set -o pipefail # Detect errors in pipeline 
 
-# This script receives merged paired-end reads.
-# Conducts quality control on the reads.
-# Measures sequencing quality.
+# This script receives merged paired-end reads. 
+# Conducts quality control on the reads. 
+# Measures sequencing quality. 
 # Taxonomic classification of reads. 
 # Determines microbial diversity among samples. 
 
@@ -19,13 +19,13 @@ if [[ $# -lt 2 || $(($# % 2)) -ne 0 ]]; then
     exit 1
 fi
 
-# Create output directories if not created 
+# Create output directories if not created
 mkdir -p logs fastp_output nonpareil_output
 
-# Initialize samples array
+# Initialize samples array 
 SAMPLES=()
 
-while [[ $# -gt 0 ]]; do # While their still reads to run
+while [[ $# -gt 0 ]]; do # While their still reads to run 
     # Define input files 
     RAW_READS_R1=$1
     RAW_READS_R2=$2

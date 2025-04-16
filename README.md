@@ -61,24 +61,40 @@ R-based scripts for abundance heatmaps, diversity analysis, and BGC annotation p
 
 ## 🔬 Tools & Dependencies
 Python 3.9 / R 4.2
+
 Fastp v0.23.2
+
 Nonpareil v3.5.5
+
 MEGAHIT v1.2.9
+
 MetaWRAP v1.3.2
+
 CheckM
+
 Kraken2 v2.1.2
+
 GTDB-Tk v2.3.2
+
 GToTree v1.8.6
+
 AntiSMASH v7.1.0
+
 BiG-MAP v1.0.0
+
 BiG-SCAPE
+
 BiG-SLICE v2
 DeepBGC v0.1.31
 ### Databases
 CheckM database
+
 Kraken2 PlusPF (January, 2024 release) database
+
 GTDB (release r214)
+
 MiBIG v4 database
+
 BGC Atlas
 
 ## 📚 Recommended Citation
@@ -86,5 +102,7 @@ BGC Atlas
 
 ## 📫 Contact
 For questions, collaborations, or further discussion:
+
 📧 Email: Corresponding author [aelbehery@aucegypt.edu] or the first author [d1stadeyemi@gmail.com]
+
 🔗 LinkedIn: [MuhammadAjagbe](https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAACfL2awB01NHgXUUc2B3r_WfCxRleV5OZVU&keywords=muhammad%20ajagbe&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=14ed48c3-4fa5-4786-a314-c7aa09240e5d&sid=QiC&spellCorrectionEnabled=true)

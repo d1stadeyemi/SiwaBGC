@@ -1,4 +1,4 @@
-# Unraveling Novel Biosynthetic Gene Clusters from the Siwa Oasis Microbiome
+# 🧬 Unraveling Novel Biosynthetic Gene Clusters from the Siwa Oasis Microbiome
 
 ## Project Overview
 This repository contains the complete bioinformatics pipeline, scripts, and supporting metadata for the metagenomic study titled:
@@ -7,7 +7,7 @@ This repository contains the complete bioinformatics pipeline, scripts, and supp
 
 This research investigates the microbial diversity and biosynthetic potential of the microbial communities in two historically significant and therapeutically acclaimed freshwater springs, Cleopatra and Fatnas, located in Egypt's Siwa Oasis. Through advanced metagenomic assembly, genome-resolved binning, and BGC discovery using cutting-edge computational tools, this study identified novel microbial lineages and biosynthetic gene clusters — including potential antibiotic-producing pathways — that could serve as candidates for future drug discovery.
 
-## Key Contributions
+## ✨ Key Contributions
 1. Comprehensive metagenomic assembly and genome binning of microbial communities from underexplored freshwater hot springs.
 
 2. Taxonomic and phylogenomic analysis of metagenome-assembled genomes (MAGs), including the identification of novel taxa.
@@ -18,16 +18,16 @@ This research investigates the microbial diversity and biosynthetic potential of
 
 5. Implementation of a reproducible bioinformatics workflow designed for natural product discovery from metagenomic data.
 
-## Why This Study Matters
+## 💡 Why This Study Matters
 The study addresses two pressing challenges in natural product research:
 
-    1. The declining discovery rate of new bioactive metabolites due to the repeated rediscovery of known compounds.
+1. The declining discovery rate of new bioactive metabolites due to the repeated rediscovery of known compounds.
 
-    2. The difficulty of prioritizing BGCs from the flood of metagenomic predictions.
+2. The difficulty of prioritizing BGCs from the flood of metagenomic predictions.
 
 By leveraging robust computational pipelines, this work demonstrates how underexplored environments — in this case, freshwater mineral springs — can serve as reservoirs of novel biosynthetic potential, expanding the scope of natural product discovery for pharmaceutical and industrial applications.
 
-## Pipeline Overview
+## 🧰 Pipeline Overview
 The pipeline consists of the following stages:
 
 1. Quality Control:
@@ -56,6 +56,7 @@ DeepBGC for functional and therapeutic potential prediction.
 
 8. Visual Analysis:
 R-based scripts for abundance heatmaps, diversity analysis, and BGC annotation plots.
+![pipeline](https://github.com/d1stadeyemi/SiwaBGC/blob/master/Images/Pipeline.png)
 
 ## 🔬 Tools & Dependencies
 Python 3.9 / R 4.2
@@ -82,7 +83,7 @@ BGC Atlas
 ## 📚 Recommended Citation
     Muhammad Ajagbe, Ali H. A. Elbehery, Shimaa F. Ahmed, Amged Ouf, Basma M. T. Abdoullateef, Rehab Abdallah, and Rania Siam (2025). Unraveling Novel Biosynthetic Gene Clusters from the Siwa Oasis Microbiome.  
 
-## Contact
+## 📫 Contact
 For questions, collaborations, or further discussion:
 📧 Email: Corresponding author [aelbehery@aucegypt.edu] or the first author [d1stadeyemi@gmail.com]
 🔗 LinkedIn: [MuhammadAjagbe](https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAACfL2awB01NHgXUUc2B3r_WfCxRleV5OZVU&keywords=muhammad%20ajagbe&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=14ed48c3-4fa5-4786-a314-c7aa09240e5d&sid=QiC&spellCorrectionEnabled=true)

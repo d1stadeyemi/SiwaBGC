@@ -56,6 +56,7 @@ DeepBGC for functional and therapeutic potential prediction.
 
 8. Visual Analysis:
 R-based scripts for abundance heatmaps, diversity analysis, and BGC annotation plots.
+
 ![pipeline](https://github.com/d1stadeyemi/SiwaBGC/blob/master/Images/Pipeline.png)
 
 ## 🔬 Tools & Dependencies

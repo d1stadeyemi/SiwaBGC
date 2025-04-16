@@ -7,6 +7,8 @@ This repository contains the complete bioinformatics pipeline, scripts, and supp
 
 This research investigates the microbial diversity and biosynthetic potential of the microbial communities in two historically significant and therapeutically acclaimed freshwater springs, Cleopatra and Fatnas, located in Egypt's Siwa Oasis. Through advanced metagenomic assembly, genome-resolved binning, and BGC discovery using cutting-edge computational tools, this study identified novel microbial lineages and biosynthetic gene clusters — including potential antibiotic-producing pathways — that could serve as candidates for future drug discovery.
 
+[keyfindings](https://github.com/d1stadeyemi/SiwaBGC/blob/master/Images/key_findings.png)
+
 ## ✨ Key Contributions
 1. Comprehensive metagenomic assembly and genome binning of microbial communities from underexplored freshwater hot springs.
 

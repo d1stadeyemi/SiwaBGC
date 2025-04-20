@@ -69,29 +69,19 @@ R-based scripts for abundance heatmaps, diversity analysis, and BGC annotation p
 -   MetaWRAP v1.3.2<br>
 -   CheckM<br>
 -   Kraken2 v2.1.2<br>
-
-GTDB-Tk v2.3.2
-
-GToTree v1.8.6
-
-AntiSMASH v7.1.0
-
-BiG-MAP v1.0.0
-
-BiG-SCAPE
-
-BiG-SLICE v2
-DeepBGC v0.1.31
+-   GTDB-Tk v2.3.2<br>
+-   GToTree v1.8.6<br>
+-   AntiSMASH v7.1.0<br>
+-   BiG-MAP v1.0.0<br>
+-   BiG-SCAPE<br>
+-   BiG-SLICE v2<br>
+-   DeepBGC v0.1.31<br>
 ### Databases
-CheckM database
-
-Kraken2 PlusPF (January, 2024 release) database
-
-GTDB (release r214)
-
-MiBIG v4 database
-
-BGC Atlas
+-   CheckM database<br>
+-   Kraken2 PlusPF (January, 2024 release) database<br>
+-   GTDB (release r214)<br>
+-   MiBIG v4 database<br>
+-   BGC Atlas
 
 ## 📚 Recommended Citation
     Muhammad Ajagbe, Ali H. A. Elbehery, Shimaa F. Ahmed, Amged Ouf, Basma M. T. Abdoullateef, Rehab Abdallah, and Rania Siam (2025). Unraveling Novel Biosynthetic Gene Clusters from the Siwa Oasis Microbiome.  

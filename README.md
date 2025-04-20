@@ -62,7 +62,8 @@ R-based scripts for abundance heatmaps, diversity analysis, and BGC annotation p
 ![pipeline](https://github.com/d1stadeyemi/SiwaBGC/blob/master/Images/Pipeline.png)
 
 ## 🔬 Tools & Dependencies
--   Python 3.9 / R 4.2<br>
+-   Python 3.9<br>
+-   R 4.2<br>
 -   Fastp v0.23.2<br>
 -   Nonpareil v3.5.5<br>
 -   MEGAHIT v1.2.9<br>

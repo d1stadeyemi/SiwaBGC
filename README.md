@@ -25,7 +25,7 @@ The study addresses two pressing challenges in natural product research:
 
 1. The declining discovery rate of new bioactive metabolites due to the repeated rediscovery of known compounds.
 
-2. The difficulty of prioritizing BGCs from the flood of metagenomic predictions.
+2. The difficulty of prioritizing BGCs from the pool of metagenomic predictions.
 
 By leveraging robust computational pipelines, this work demonstrates how underexplored environments — in this case, freshwater mineral springs — can serve as reservoirs of novel biosynthetic potential, expanding the scope of natural product discovery for pharmaceutical and industrial applications.
 
@@ -62,19 +62,13 @@ R-based scripts for abundance heatmaps, diversity analysis, and BGC annotation p
 ![pipeline](https://github.com/d1stadeyemi/SiwaBGC/blob/master/Images/Pipeline.png)
 
 ## 🔬 Tools & Dependencies
-Python 3.9 / R 4.2
-
-Fastp v0.23.2
-
-Nonpareil v3.5.5
-
-MEGAHIT v1.2.9
-
-MetaWRAP v1.3.2
-
-CheckM
-
-Kraken2 v2.1.2
+-   Python 3.9 / R 4.2<br>
+-   Fastp v0.23.2<br>
+-   Nonpareil v3.5.5<br>
+-   MEGAHIT v1.2.9<br>
+-   MetaWRAP v1.3.2<br>
+-   CheckM<br>
+-   Kraken2 v2.1.2<br>
 
 GTDB-Tk v2.3.2
 

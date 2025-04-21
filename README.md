@@ -85,6 +85,7 @@ R-based scripts for abundance heatmaps, diversity analysis, and BGC annotation p
 -   BGC Atlas
 
 ## 📚 Recommended Citation
+<p style="color: red">This study is under review</p>
     Muhammad Ajagbe, Ali H. A. Elbehery, Shimaa F. Ahmed, Amged Ouf, Basma M. T. Abdoullateef, Rehab Abdallah, and Rania Siam (2025). Unraveling Novel Biosynthetic Gene Clusters from the Siwa Oasis Microbiome.  
 
 ## 📫 Contact

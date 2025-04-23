@@ -13,13 +13,13 @@ set -o pipefail # Detect errors in pipeline
 # Taxonomic classification of reads. 
 # Determines microbial diversity among samples. 
 
-# Check if at least one pair of reads is given 
+# Check if at least one pair of reads is given
 if [[ $# -lt 2 || $(($# % 2)) -ne 0 ]]; then
     echo "Usage: $0 Sample1_R1 Sample1_R2 [Sample2_R1 Sample2_R2...]"
     exit 1
 fi
 
-# Create output directories if not created
+# Create output directories if not created 
 mkdir -p logs fastp_output nonpareil_output
 
 # Initialize samples array 

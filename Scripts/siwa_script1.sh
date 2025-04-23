@@ -1,6 +1,6 @@
-#!/bin/bash 
+#!/bin/bash  
 
-# Load Conda 
+# Load Conda
 source ~/miniconda3/etc/profile.d/conda.sh
 
 # Handle different errors  

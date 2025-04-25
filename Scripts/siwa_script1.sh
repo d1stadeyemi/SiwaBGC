@@ -19,13 +19,13 @@ if [[ $# -lt 2 || $(($# % 2)) -ne 0 ]]; then
     exit 1
 fi
 
-# Create output directories if not created 
+# Create output directories if not created
 mkdir -p logs fastp_output nonpareil_output
 
-# Initialize samples array 
+# Initialize samples array
 SAMPLES=()
 
-while [[ $# -gt 0 ]]; do # While their still reads to run 
+while [[ $# -gt 0 ]]; do # While their still reads to run
     # Define input files 
     RAW_READS_R1=$1
     RAW_READS_R2=$2

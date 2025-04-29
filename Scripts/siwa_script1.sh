@@ -31,16 +31,16 @@ while [[ $# -gt 0 ]]; do # While their still reads to run
     RAW_READS_R2=$2
     SAMPLE_NAME=$(basename "$RAW_READS_R1" | cut -d"_" -f1) # Extract sample name
 
-    # Check input files exit 
+    # Check input files exit
     if [[ ! -f "$RAW_READS_R1" || ! -f "$RAW_READS_R2" ]]; then
         echo "Error! : One or both sample files ($RAW_READS_R1, $RAW_READS_R2) not found"
         exit 1
     fi
 
-    # Save to array
+    # Save to array 
     SAMPLES+=("$SAMPLE_NAME" "$RAW_READS_R1" "$RAW_READS_R2")
 
-    # Shift to next pair
+    # Shift to next pair 
     shift 2
 done
 

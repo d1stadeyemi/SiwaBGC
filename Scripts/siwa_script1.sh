@@ -44,7 +44,7 @@ while [[ $# -gt 0 ]]; do # While their still reads to run
     shift 2
 done
 
-# 1. Quality control with Fastp
+# 1. Quality control with Fastp 
 echo "Running Fastp on all samples..."
 
 for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do
@@ -55,7 +55,7 @@ for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do
     echo "Processing ${SAMPLE_NAME}_sample..."
     fastp -i "$RAW_READS_R1" -I "$RAW_READS_R2" -o fastp_output/"$SAMPLE_NAME"_cleaned_r1.fastq -O fastp_output/"$SAMPLE_NAME"_cleaned_r2.fastq > logs/"$SAMPLE_NAME"_fastp.log 2>&1
 
-    # Check the exit status of the last command. If it failed (exit status !=0), print error message and exit
+    # Check the exit status of the last command. If it failed (exit status !=0), print error message and exit 
     if [[ $? -ne 0 ]]; then
         echo "Error! Fastp failed for "$SAMPLE_NAME"_sample. Check logs/"$SAMPLE_NAME"_fastp.log for details"
         exit 1
@@ -64,7 +64,7 @@ done
 
 echo "Fastp completed for all samples. Output saved to 'fastp_output'"
 
-# 2. Evaluate sequence quality with Nonpareil 
+# 2. Evaluate sequence quality with Nonpareil  
 conda activate nonpareil
 echo "Running Nonpareil on all samples..."
 

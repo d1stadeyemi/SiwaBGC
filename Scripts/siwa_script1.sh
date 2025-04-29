@@ -44,7 +44,7 @@ while [[ $# -gt 0 ]]; do # While their still reads to run
     shift 2
 done
 
-# 1. Quality control with Fastp 
+# 1. Quality control with Fastp
 echo "Running Fastp on all samples..."
 
 for ((i = 0; i < ${#SAMPLES[@]}; i += 3)); do
@@ -64,7 +64,7 @@ done
 
 echo "Fastp completed for all samples. Output saved to 'fastp_output'"
 
-# 2. Evaluate sequence quality with Nonpareil  
+# 2. Evaluate sequence quality with Nonpareil
 conda activate nonpareil
 echo "Running Nonpareil on all samples..."
 

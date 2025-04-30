@@ -75,8 +75,8 @@ while [[ $# -gt 0 ]]; do # While there are still reads to process
         -C metawrap_output/"$SAMPLE_NAME"_initial_bins/concoct_bins/ -c 50 -x 10 \
         > logs/"$SAMPLE_NAME"_refined_bins.log 2>&1
 
-    # Check the exit status of the last command.  
-    # If it failed (exit status !=0), print error message and exit. 
+    # Check the exit status of the last command.
+    # If it failed (exit status !=0), print error message and exit.
     if [[ $? -ne 0 ]]; then
         echo "Error! Metawrap refinement module failed for "$SAMPLE_NAME"_sample." 
         echo "Check logs/"$SAMPLE_NAME"_refined_bins.log for details"

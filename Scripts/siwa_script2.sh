@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Load Conda
+# Load Conda 
 source ~/miniconda3/etc/profile.d/conda.sh
 
 # Error on undefined variables 
@@ -17,7 +17,7 @@ if [[ $# -lt 2 || $(($# % 2)) -ne 0 ]]; then
     exit 1
 fi
 
-# Create output directories if not created
+# Create output directories if not created 
 mkdir -p logs megahit_output metawrap_output
 
 while [[ $# -gt 0 ]]; do # While there are still reads to process

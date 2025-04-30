@@ -100,10 +100,10 @@ while [[ $# -gt 0 ]]; do # While there are still reads to process
     conda deactivate
     echo "Metawrap completed for "$SAMPLE_NAME"_sample. Output saved to 'metawrap_output'"
 
-    # 3. Phylogenetic analysis with Gtotree
+    # 3. Phylogenetic analysis with Gtotree 
 
 
 
-    # Shift to next pair
+    # Shift to next pair 
     shift 2
 done

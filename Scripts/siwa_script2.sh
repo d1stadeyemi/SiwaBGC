@@ -89,7 +89,7 @@ while [[ $# -gt 0 ]]; do # While there are still reads to process
         -b metawrap_output/"$SAMPLE_NAME"_refined_bins/metawrap_50_10_bins \
         > logs/"$SAMPLE_NAME"_reassembled_bins.log 2>&1
 
-    # Check the exit status of the last command. 
+    # Check the exit status of the last command.
     # If it failed (exit status !=0), print error message and exit.
     if [[ $? -ne 0 ]]; then
         echo "Error! Metawrap reassembly module failed for "$SAMPLE_NAME"_sample."
@@ -100,10 +100,10 @@ while [[ $# -gt 0 ]]; do # While there are still reads to process
     conda deactivate
     echo "Metawrap completed for "$SAMPLE_NAME"_sample. Output saved to 'metawrap_output'"
 
-    # 3. Phylogenetic analysis with Gtotree 
+    # 3. Phylogenetic analysis with Gtotree
 
 
 
-    # Shift to next pair 
+    # Shift to next pair
     shift 2
 done

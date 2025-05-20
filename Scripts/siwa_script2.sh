@@ -26,21 +26,21 @@ while [[ $# -gt 0 ]]; do # While there are still reads to process
     CLEANED_R2=$2
     SAMPLE_NAME=$(basename "$CLEANED_R1" | cut -d"_" -f1) # Extract sample name
 
-    # Check if input files exist
+    # Check if input files exist 
     if [[ ! -f "$CLEANED_R1" || ! -f "$CLEANED_R2" ]]; then
         echo "Error! : One or both sample files ($CLEANED_R1, $CLEANED_R2) not found"
         exit 1
     fi
 
-    # 1. Assembly with Megahit.
+    # 1. Assembly with Megahit. 
     echo "Running Megahit for ${SAMPLE_NAME} cleaned reads..."
     conda activate megahit
     megahit -v
     megahit -1 "$CLEANED_R1" -2 "$CLEANED_R2" -o megahit_output/"$SAMPLE_NAME"_output \
         > logs/"$SAMPLE_NAME"_megahit.log 2>&1
 
-    # Check the exit status of the last command. 
-    # If it failed (exit status !=0), print error message and exit.
+    # Check the exit status of the last command.  
+    # If it failed (exit status !=0), print error message and exit. 
     if [[ $? -ne 0 ]]; then
         echo "Error! Megahit failed for "$SAMPLE_NAME"_sample." 
         echo "Check logs/"$SAMPLE_NAME"_megahit.log for details"

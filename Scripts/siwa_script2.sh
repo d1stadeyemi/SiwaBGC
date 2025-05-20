@@ -7,9 +7,9 @@ source ~/miniconda3/etc/profile.d/conda.sh
 set -u 
 
 # This script assembles metagenomic reads into contigs. 
-# Bins the contigs and select MAGs. 
-# Classifies the MAGs into taxa. 
-# Place MAGs within the GTDB reference genomes for phylogenomy. 
+# Bins the contigs and select MAGs.
+# Classifies the MAGs into taxa.
+# Place MAGs within the GTDB reference genomes for phylogenomy.
 
 # Check if at least one pair of clean reads is given
 if [[ $# -lt 2 || $(($# % 2)) -ne 0 ]]; then

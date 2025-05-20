@@ -20,11 +20,11 @@ fi
 # Create output directories if not created
 mkdir -p logs megahit_output metawrap_output
 
-while [[ $# -gt 0 ]]; do # While there are still reads to process
-    # Define input files
+while [[ $# -gt 0 ]]; do # While there are still reads to process 
+    # Define input files 
     CLEANED_R1=$1
     CLEANED_R2=$2
-    SAMPLE_NAME=$(basename "$CLEANED_R1" | cut -d"_" -f1) # Extract sample name 
+    SAMPLE_NAME=$(basename "$CLEANED_R1" | cut -d"_" -f1) # Extract sample name
 
     # Check if input files exist
     if [[ ! -f "$CLEANED_R1" || ! -f "$CLEANED_R2" ]]; then

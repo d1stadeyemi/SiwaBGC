@@ -50,12 +50,12 @@ while [[ $# -gt 0 ]]; do # While there are still reads to process
     conda deactivate
     echo "Megahit completed for "$SAMPLE_NAME"_sample. Output saved to 'megahit_output'"
 
-    # 2. Binnning with metawrap 
+    # 2. Binnning with metawrap
     echo "Running Metawrap on ${SAMPLE_NAME} assembly..."
     conda activate metawrap
     metawrap -v
     
-    # Initial binning with three different algorithms 
+    # Initial binning with three different algorithms
     metawrap binning -o metawrap_output/"$SAMPLE_NAME"_initial_bins -t 4 \
         -a megahit_output/"$SAMPLE_NAME"_output/contigs.fa --metabat2 --maxbin2 --concoct \
         "$CLEANED_R1" "$CLEANED_R2" > logs/"$SAMPLE_NAME"_initial_bins.log 2>&1

@@ -32,13 +32,13 @@ while [[ $# -gt 0 ]]; then
         exit 1
     fi
 
-    # Check if input directory is empty
+    # Check if input directory is empty 
     if ! find "$INPUT_DIR" -mindepth 1 | read -r _; then
         echo "Error: '$INPUT_DIR' is empty."
         exit 1
     fi
 
-    # 1. Detect BGCs in samples with Antismash
+    # 1. Detect BGCs in samples with Antismash 
     conda activate antismash
     echo "Running Antismash on ${SAMPLE_NAME}_MAGs..."
     

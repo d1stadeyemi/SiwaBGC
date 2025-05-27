@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Load Conda 
+# Load Conda
 source ~/miniconda3/etc/profile.d/conda.sh
 
-# Error on undefined variables 
+# Error on undefined variables
 set -u 
 
 # This script detects BGCs from MAGs and unbinned contigs Fasta files.

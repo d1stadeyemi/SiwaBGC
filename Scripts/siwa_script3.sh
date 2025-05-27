@@ -12,7 +12,7 @@ set -u
 
 mkdir -p logs antismash_output BGCs bigmap_output
 
-# Ensure at least one directory is provided 
+# Ensure at least one directory is provided
 if [[ $# -lt 1 ]]; then
     echo "Error: No input directory provided."
     echo "Usage: $(basename "$0") <MAGS_DIR> [<MAGS_DIR2>...]"
@@ -20,11 +20,11 @@ if [[ $# -lt 1 ]]; then
 fi
 
 while [[ $# -gt 0 ]]; then
-    # Define input directory
+    # Define input directory 
     INPUT_DIR=$1
-    SAMPLE_NAME=$(basename "$INPUT_DIR" | cut -d"_" -f1) # Extract sample name
+    SAMPLE_NAME=$(basename "$INPUT_DIR" | cut -d"_" -f1) # Extract sample name 
 
-    # Check if input directory is not valid. 
+    # Check if input directory is not valid.
     if [[ ! -d "$INPUT_DIR" ]]
     then
         echo "Error: "$INPUT_DIR" is not a valid directory"

@@ -5,14 +5,14 @@ source ~/miniconda3/etc/profile.d/conda.sh
 
 # Error on undefined variables
 set -u 
-
-# This script detects BGCs from MAGs and unbinned contigs Fasta files.
-# Calculates the abundance of BGCs in each sample.
+ 
+# This script detects BGCs from MAGs and unbinned contigs Fasta files. 
+# Calculates the abundance of BGCs in each sample. 
 # Compares the putative BGCs with MiBIG and BGC atlas databases for novelty check.
 
 mkdir -p logs antismash_output BGCs bigmap_output
 
-# Ensure at least one directory is provided
+# Ensure at least one directory is provided 
 if [[ $# -lt 1 ]]; then
     echo "Error: No input directory provided."
     echo "Usage: $(basename "$0") <MAGS_DIR> [<MAGS_DIR2>...]"
@@ -20,7 +20,7 @@ if [[ $# -lt 1 ]]; then
 fi
 
 while [[ $# -gt 0 ]]; then
-    # Define input directory 
+    # Define input directory
     INPUT_DIR=$1
     SAMPLE_NAME=$(basename "$INPUT_DIR" | cut -d"_" -f1) # Extract sample name 
 
